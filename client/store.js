@@ -14,7 +14,7 @@ const store = createStore(rootReducer, defaultState)
 
 const history = syncHistoryWithStore(browserHistory, store)
 
-export history
+export {history}
 
 export default store
 
