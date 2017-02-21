@@ -1,6 +1,7 @@
 import React from "react"
 import {render} from "react-dom"
 import css from "./styles/style.styl"
-import Main from "./components/main"
+import router from "./components/router"
 
-render(<Main />, document.getElementById("root"))
+render(router, document.getElementById("root"))
+
