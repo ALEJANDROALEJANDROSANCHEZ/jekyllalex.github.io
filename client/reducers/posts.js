@@ -1,4 +1,6 @@
 
+// ! Every reducer runs every time an action is taken
+
 // args
 // 1 action - data
 // 2 copy of current state
