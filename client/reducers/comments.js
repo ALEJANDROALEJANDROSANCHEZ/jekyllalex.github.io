@@ -1,6 +1,7 @@
 
 const actions = {
-  "ADD_COMMENT": addComment
+  "ADD_COMMENT": addComment,
+  "REMOVE_COMMENT": removeComment
 }
 
 function addComment(state, action) {
@@ -10,6 +11,15 @@ function addComment(state, action) {
       user: action.author,
       text: action.comment
     }
+  ]
+}
+
+function removeComment(state, action) {
+  const i = action.commentIndex
+
+  return [
+    ...state.slice(0, i),
+    ...state.slice(i + 1)
   ]
 }
 

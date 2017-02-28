@@ -20,10 +20,13 @@ class Comments extends React.Component {
   }
 
   render() {
-    const {comments} = this.props
+    const {comments, removeComment, params} = this.props
+    const {postId} = params
     return(
       <div className="comments">
-        {comments.map((c, i) => <Comment comment={c} i={i} key={i} />)}
+        {comments.map((c, i) => <Comment comment={c} i={i} key={i}
+                                         postId={postId}
+                                         removeComment={removeComment} />)}
 
         <form ref="commentForm" className="comment-form"
               onSubmit={this.handleSubmit}>
@@ -41,7 +44,8 @@ class Comments extends React.Component {
 Comments.propTypes = {
   comments: React.PropTypes.array.isRequired,
   params: React.PropTypes.object.isRequired,
-  addComment: React.PropTypes.func.isRequired
+  addComment: React.PropTypes.func.isRequired,
+  removeComment: React.PropTypes.func.isRequired
 }
 
 export default Comments
