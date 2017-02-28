@@ -10,7 +10,11 @@ const defaultState = {
   posts
 }
 
-const store = createStore(rootReducer, defaultState)
+const enhancers = compose(
+  window.devToolsExtension ? window.devToolsExtension() : f => f
+)
+
+const store = createStore(rootReducer, defaultState, enhancers)
 
 const history = syncHistoryWithStore(browserHistory, store)
 
