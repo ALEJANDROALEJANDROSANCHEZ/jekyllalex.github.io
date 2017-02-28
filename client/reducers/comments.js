@@ -1,10 +1,11 @@
 
 function comments(state = [], action) {
 
-  console.log(state, action)
-
-  return state
-
+  switch(action.type) {
+    case "INCREMENT_LIKES" :
+    default:
+      return state
+  }
 }
 
 export default comments
