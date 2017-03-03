@@ -11,11 +11,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wesbos/Learn-Redux.git"
+    "url": "https://github.com/anthonyfuentes/reduxstagram"
   },
-  "author": "Wes Bos",
+  "author": "Anthony Fuentes",
   "license": "MIT",
-  "homepage": "https://github.com/wesbos/Learn-Redux",
+  "homepage": "http://anthonyfuentes.us/reduxstagram/",
   "dependencies": {
     "babel-core": "^6.5.2",
     "babel-eslint": "^6.1.2",
